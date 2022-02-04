@@ -8,6 +8,24 @@ BCOR=8mm]{scrbook} % BCOR sets the space, used by the type of  book. (e.g. glued
 %scrreprt is used for larger texts with chapters (Master or Bachelor Thesis)
 %scrartcl is used when there are no chapters ( for smaller paper)
 
+\usepackage{fontspec}   %加這個就可以設定字體
+\usepackage{xeCJK}      %讓中英文字體分開設置
+%設定中文為系統上的字型，而英文不去更動，使用原TeX字型
+\setCJKmainfont[AutoFakeBold=2,AutoFakeSlant=.4]{思源宋體}
+\setCJKsansfont[AutoFakeBold=2,AutoFakeSlant=.4]{Noto Sans CJK TC}
+\setCJKmonofont[AutoFakeBold=2,AutoFakeSlant=.4]{Noto Sans Mono CJK TC}
+\XeTeXlinebreaklocale "zh"             %這兩行一定要加，中文才能自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt     %這兩行一定要加，中文才能自動換行
+\leftskip=0pt                          %左右對齊
+\rightskip=0pt plus 0cm                %左右對齊
+\defaultCJKfontfeatures{AutoFakeBold=2,AutoFakeSlant=.4} %以後不用再設定粗斜
+\newCJKfontfamily\Kai{I.Ngaan}         %定義指令\Kai則切換成顏楷體
+\newCJKfontfamily\Hei{思源黑體}        %定義指令\Hei則切換成思源黑體
+\newCJKfontfamily\NewMing{新細明體}    %定義指令\NewMing則切換成新細明體
+\newCJKfontfamily\Newsong{I.BMing}
+\newCJKfontfamily\Song{思源宋體}       %定義指令\Hei則切換成思源宋體
+\newCJKfontfamily\SKai{全字庫正楷體}   %定義指令\SKai則切換成全字庫正楷體
+
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel} % sets up english hyphenation
@@ -29,6 +47,7 @@ BCOR=8mm]{scrbook} % BCOR sets the space, used by the type of  book. (e.g. glued
 \bibliography{thesis.bib}% Include all the bibliography files
 \usepackage{booktabs} % enables reference bookstyle tables
 \usepackage[format=plain, labelfont=bf]{caption}
+\usepackage{amsmath}
 \usepackage[capitalize,noabbrev]{cleveref}
 \usepackage{subcaption} % enables use multiple figures in a figure
 \captionsetup{compatibility=false}
