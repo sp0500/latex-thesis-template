@@ -1,5 +1,5 @@
-\documentclass[12pt, %font size
-a4paper, %paper type
+\documentclass[8pt, %font size
+a5paper, %paper type
 twoside, % two sided printing
 openright, % start new chapter on right side only ( inserts blank pages )
 abstract=on, % Use an abstract
@@ -25,6 +25,11 @@ BCOR=8mm]{scrbook} % BCOR sets the space, used by the type of  book. (e.g. glued
 \newCJKfontfamily\Newsong{I.BMing}
 \newCJKfontfamily\Song{思源宋體}       %定義指令\Hei則切換成思源宋體
 \newCJKfontfamily\SKai{全字庫正楷體}   %定義指令\SKai則切換成全字庫正楷體
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\setlength\intextsep{5pt}
 
 
 \usepackage[utf8]{inputenc}
@@ -502,6 +507,10 @@ BCOR=8mm]{scrbook} % BCOR sets the space, used by the type of  book. (e.g. glued
             BibTeX. If you do not have \texttt{biber}, or your IDE does not
             support it, consider switching the backend to \texttt{bibtex}.
     \end{description}
+\include{001}
+\include{002}
+\include{003}
+
 
 
     \backmatter
